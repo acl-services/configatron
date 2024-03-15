@@ -42,16 +42,9 @@ module Configatron::Integrations
       config_files.collect! {|config| File.expand_path(config)}.uniq!
 
       config_files.each do |config|
-        begin
-          if File.exists?(config)
-            # puts "Configuration: #{config}"
-            require config
-          end
-        rescue NoMethodError
-          if File.exist?(config)
-            # puts "Configuration: #{config}"
-            require config
-          end
+        if File.exists?(config)
+          # puts "Configuration: #{config}"
+          require config
         end
       end
     end
