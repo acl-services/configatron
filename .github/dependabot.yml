@@ -1,0 +1,30 @@
+version: 2
+updates:
+  # Maintain dependencies for npm
+  - package-ecosystem: 'bundler'
+    directory: '/'
+    registries:
+      - npm-github
+    schedule:
+      interval: 'weekly'
+    pull-request-branch-name:
+      separator: '-'
+    # Default value is 5
+    # Set to 0 to prevent Dependabot from creating PRs
+    open-pull-requests-limit: 1
+    # This will combine all dependency updates into a single PR
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+    # This prevents dependabot from bumping major versions, which often have breaking changes
+    versioning-strategy: increase
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+registries:
+  npm-github:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{ secrets.PKG_READ_TOKEN }}
+    replaces-base: true
