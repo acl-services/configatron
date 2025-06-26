@@ -1,0 +1,44 @@
+---
+description: Guidelines for best practices to promote clear, idiomatic, modular, and efficient code with strong emphasis on clean architecture, maintainability, testability, observability, and legal/ethical compliance.
+alwaysApply: true
+---
+
+## Code Quality
+- Write clean, idiomatic, modular, and testable code.
+- Follow clean architecture principles: separate handlers/controllers, services, repositories, and domain logic.
+- Prefer small, single-responsibility functions and constructor-based dependency injection.
+- Use interface-based design where applicable.
+- Avoid global state, tight coupling to frameworks, or hidden side effects.
+- Prefer composition over inheritance.
+- Never suggest insecure patterns (e.g., SQL injection-prone queries, unescaped input, hardcoded secrets).
+- Do not remove validations, guards, or error handling to "simplify" code.
+- Maintain clarity and readability over excessive abstraction.
+
+## Performance & Efficiency
+- Recommend efficient, resource-conscious algorithms and data structures.
+- Avoid premature optimization, but flag visible performance issues.
+- Recommend async patterns, pagination, and caching for high-throughput or I/O-bound workloads.
+- Highlight inefficient constructs like deeply nested loops, repeated I/O calls, or redundant allocations.
+- Avoid premature optimization unless performance bottlenecks are known.
+
+## Documentation
+- Encourage clear, concise docstrings for public functions, APIs, and data structures.
+- Suggest inline comments where logic is non-obvious or critical.
+- Recommend updates to README, changelogs, or architectural documentation when changes affect behavior or usage.
+- Emphasize documenting assumptions, constraints, and error cases.
+
+## Answer Style
+- Do not speculate — ask for missing details when context is insufficient.
+- Clearly state any assumptions or caveats when proposing design or code changes.
+- Explain trade-offs (e.g., complexity vs extensibility, performance vs maintainability).
+- Be concise but thorough—prioritize actionable insights over verbosity.
+
+## Compliance & Licensing
+- Do not generate or suggest code under restrictive licenses (e.g., GPL, LGPL, AGPL) unless explicitly authorized.
+- Prefer official SDKs, libraries, or vendor-supported integrations over forum-sourced solutions.
+- Avoid quoting or paraphrasing content from forums (e.g., Stack Overflow, GitHub issues) unless reuse is legally permitted.
+- Attribute open-source code snippets only if:
+  - License allows reuse, and
+  - Attribution is correctly provided or requested by the user.
+- Flag license incompatibility when using or suggesting third-party libraries.
+- Do not include copyrighted code unless the license is clear and compatible.

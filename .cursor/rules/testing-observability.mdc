@@ -1,0 +1,23 @@
+---
+description: Rules to ensure high-quality, testable, and observable code.
+alwaysApply: true
+---
+
+## Testing, Observability, and Maintainability
+
+### Testing Practices
+- Generate unit tests using the existing style.
+- Mock or stub external dependencies in tests to isolate logic.
+- Avoid suggesting unlogged or silent failures.
+- Ensure test coverage includes both common paths and edge cases.
+
+### Observability
+- Add instrumentation (metrics, logs) when generating background tasks or service integration code.
+- Include trace IDs, request IDs, and error metadata in log output recommendations.
+- Promote usage of observability when relevant.
+
+### Maintainability
+- Always suggest testable code by decoupling logic from I/O and dependencies.
+- Recommend structured logging with traceable error messages.
+- Encourage clear comments for non-obvious logic.
+- Ensure code is modular, making it easy to update or extend in the future.

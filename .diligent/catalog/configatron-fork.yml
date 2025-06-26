@@ -1,0 +1,28 @@
+#This file was automatically generated during migration from the central repository
+#Relevant documentation for this file can be found here: https://github.com/DiligentCorp/platform-ownership/blob/main/docs/ForUsers/serviceFileTemplateFull.yaml
+dateVerified: '2025-06-26'
+name: "Configatron Fork"
+entityTag: "configatron-fork"
+primaryParentEntityTag: "d1p-launchpad"
+owner: "rd-team-baymax"
+description: "A fork of the Configatron repository, used to manage environment configurations on the rails launchpad application."
+groupTags:
+  - "dilType:component"
+github:
+  organization: "acl-services"
+  repository: "configatron"
+msTeamsChannels:
+  - name: "General"
+    teamName: "DIL-Baymax"
+    description: "This channel is used for general questions or requests on any services managed by Baymax team."
+    notificationsEnabled: true
+jira:
+  projects:
+    - name: "ADM"
+opsgenie:
+  opsgenieScheduleId: "579077f3-65b6-4454-983c-a600c67b1538"
+  opsgenieTeamName: "DIL-VAN-Baymax"
+customMetadata:
+  additionalDetails:
+    - key: "languages"
+      value: "Typescript"
